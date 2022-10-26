@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mtcom.myboard.dao.BoardDao">
+	
+	<select id="boardList" parameterType="map" resultType="com.mtcom.myboard.dto.BoardDto">
+		 select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, 
+		 		b.title, b.content, b.reg_dt, b.read_count
+        	from BOARD b, USERS u 
+           where b.user_seq = u.user_seq 
+           order by b.board_id desc
+           limit #{limit} offset #{offset} 
+	</select>
+	
+	<select id="boardListTotalCount"  resultType="int">
+		 select count(*) from board
+	</select>
+	
+	
+	<select id="boardListSearchWord" parameterType="map" resultType="com.mtcom.myboard.dto.BoardDto">
+		 select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, 
+		 		b.title, b.content, b.reg_dt, b.read_count
+        	from BOARD b, USERS u 
+           where b.user_seq = u.user_seq 
+           	 and b.title like concat('%',#{searchWord},'%')
+           order by b.board_id desc
+           limit #{limit} offset #{offset} 
+	</select>
+	
+	<select id="boardListSearchWordTotalCount" parameterType="string" resultType="int">
+		 select count(*) from board where title like concat('%',#{searchWord},'%') 
+	</select>
+	
+	<select id="boardDetail" parameterType="int" resultType="com.mtcom.myboard.dto.BoardDto">
+		  select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, 
+		 		 b.title, b.content, b.reg_dt, b.read_count
+        	from BOARD b, USERS u 
+           where b.user_seq = u.user_seq 
+           	 and b.board_id=#{boardId}
+           
+	</select>
+	
+	<update id="boardUpdate" parameterType="com.mtcom.myboard.dto.BoardDto">
+		update board
+		   set title=#{title}, content= #{content}
+		 where board_id= #{boardId}
+	</update>
+	
+	
+	<delete id="boardDelete" parameterType="int" >
+		delete from board where board_id=#{boardId}
+	</delete>
+	
+	
+	<insert id="boardInsert" parameterType="com.mtcom.myboard.dto.BoardDto">
+    insert into board ( user_seq, title, content, reg_dt, read_count )
+                VALUES ( #{userSeq}, #{title}, #{content}, now(), 0 )
+</insert>
+</mapper>
