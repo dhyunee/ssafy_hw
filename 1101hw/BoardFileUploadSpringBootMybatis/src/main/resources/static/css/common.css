@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.ck-editor__editable {
+    /* editing area */
+    height: 300px;
+}
+
+.thumbnail-wrapper {
+	margin-top: 5px;
+}
+
+.thumbnail-wrapper img{
+	width: 100px !important;
+	margin-right: 5px;
+	max-witdh: 100px;
+}

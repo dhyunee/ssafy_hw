@@ -1,0 +1,29 @@
+2022-11-01 20:54:33.643  INFO 16504 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_192 on DESKTOP-9NPRB9I with PID 16504 (C:\Users\rlthd\Documents\workspace-sts-3.9.14.RELEASE\BoardFileUploadSpringBootMybatis\bin\main started by rlthd in C:\Users\rlthd\Documents\workspace-sts-3.9.14.RELEASE\BoardFileUploadSpringBootMybatis)
+2022-11-01 20:54:33.644  INFO 16504 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-01 20:54:33.680  INFO 16504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-01 20:54:33.682  INFO 16504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-01 20:54:34.514  INFO 16504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-01 20:54:34.520  INFO 16504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 20:54:34.520  INFO 16504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-01 20:54:34.576  INFO 16504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 20:54:34.576  INFO 16504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 893 ms
+2022-11-01 20:54:34.904  INFO 16504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-01 20:54:35.115  INFO 16504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-01 20:54:35.144  INFO 16504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-01 20:54:35.154  INFO 16504 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 1.801 seconds (JVM running for 2.399)
+2022-11-01 20:55:02.183  INFO 16504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 23 class path changes (0 additions, 0 deletions, 23 modifications)
+2022-11-01 20:55:02.298  INFO 16504 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 20:55:02.430  INFO 16504 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_192 on DESKTOP-9NPRB9I with PID 16504 (C:\Users\rlthd\Documents\workspace-sts-3.9.14.RELEASE\BoardFileUploadSpringBootMybatis\bin\main started by rlthd in C:\Users\rlthd\Documents\workspace-sts-3.9.14.RELEASE\BoardFileUploadSpringBootMybatis)
+2022-11-01 20:55:02.430  INFO 16504 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-01 20:55:02.613  INFO 16504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-01 20:55:02.614  INFO 16504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 20:55:02.614  INFO 16504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-01 20:55:02.623  INFO 16504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 20:55:02.623  INFO 16504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2022-11-01 20:55:02.703  INFO 16504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-01 20:55:02.756  INFO 16504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-01 20:55:02.766  INFO 16504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-01 20:55:02.770  INFO 16504 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 0.364 seconds (JVM running for 30.016)
+2022-11-01 20:55:02.772  INFO 16504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-01 21:28:48.362  INFO 16504 --- [RMI TCP Connection(48)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-01 21:28:48.456  INFO 16504 --- [RMI TCP Connection(48)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
