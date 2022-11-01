@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mycom.hw.dao.EmpDao"> <!-- @Mapper annotation 있는 dao -->
+<select id="list" resultType="com.mycom.hw.dto.EmpDto">
+	select employeeId,first_name,last_name,email,hiredate
+</select>
+
+<insert id="empInsert" parameterType="com.mycom.hw.dto.EmpDto" >
+	insert into emp ( employeeId, first_name,last_name,email,hiredate )
+	values ( #{employeeId},#{firstName},#{lastName},#{email},#{hireDate} )
+</insert>
+
+<update id="empUpdate" parameterType="com.mycom.hw.dto.EmpDto">
+	update emp 
+	set employeeId=#{employeeId}
+	,firt_name=#{firtName}
+	,last_name=#{lastName}
+	,email=#{email}
+	,hiredate=#{hireDate}
+</update>
+
+<delete id="delete" parameterType="int">
+	delete from emp
+	where employeeId=#{employeeId}
+
+</delete>
