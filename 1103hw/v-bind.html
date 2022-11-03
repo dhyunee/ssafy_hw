@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue Directive v-bind</title>
+</head>
+<style>
+    #picture{
+        width: 100px;        
+    }
+</style>
+<body>
+    <div id="app1">
+
+        <!-- 그냥 id 는 문자열로 -->
+        <div id="bindId">{{ textId }}</div>
+
+        <!-- v-bind:id 는 bindId 의 value -->
+        <div v-bind:id="bindId">{{ textId }}</div>
+
+
+        <a v-bind:href="bindUrl">{{ textUrl }}</a>
+        <br>
+        <div v-bind:data-boardId="boardId">6789 게시글</div>
+        <!-- Add img tag With Image With id picture-->
+        <br>
+        {{ textSrc }}
+        <img v-bind:src="bindSrc" v-bind:id="srcId"/>
+        <!-- 축약형 : 이요 -->
+        <img :src="bindSubSrc" :id="srcId"/>
+        <br>
+        <!-- 값을 직접 사용 X -->
+        <!-- <input type="text" :value="안녕하세요"/> -->
+
+        <input type="text" :value="textVal"/>
+    </div>
+<script>
+    new Vue({
+        el: '#app1',
+        data(){
+            return {
+                textId: 'v-bind Id',
+                bindId: '12345',
+                textUrl: 'google.com',
+                bindUrl: 'https://google.com',
+
+                boardId: "6789",
+                
+                textSrc: 'cake',
+                bindSrc: 'cake.jpg',
+                bindSubSrc: './img/cake.jpg',
+                srcId:"picture",
+
+                textVal: "안녕!!"
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

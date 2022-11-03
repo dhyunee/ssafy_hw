@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue Directive v-if v-show v-for</title>
+</head>
+<body>
+    <div id="app1">
+        <!-- v-if <= dom 추가/삭제-->
+        <div v-if="flagIf">v-if 보이나요?</div>
+
+        <!-- v-show <= display:none -->
+        <div v-show="flagShow">v-show 보이나요?</div>
+
+        <!-- v-for 반복 : 문자열 배열 -->
+        <ul>
+            <li v-for="(item, index) in arrayItems" v-bind:key="index">{{ item }}</li>
+        </ul>
+
+        <!-- v-for 반복 : 객체 배열 -->
+        <ul>
+            <li v-for="(item, index) in objectArrayItems" v-bind:key="index">{{ item.name }} /  {{ item.price }}</li>
+            <!-- 한 {{}} 안에 두개의 data 를 쓰면 ?? {{ item.name  item.price }} -->
+            <!-- + 는 문자열 연결, - 는 NaN, {{ item.name  item.price }} 은 오류 발생-->
+        </ul>
+        
+        <!-- v-for 중 원하는 것만 출력하고자 할 때, 이전에는 v-if 를 함께 쓸 수 있지만 지양하도록 가이드 됨
+        v-for 와 v-if 의 우선 순위 문제
+        대신 computed 에서 원하는 것만 취하는 filter 등을 사용 -->
+        <ul>
+            <li v-for="(item, index) in filteredItems" v-bind:key="index">{{ item.name }} /  {{ item.price }}</li>
+        </ul>
+    </div>
+
+    <div id="app2">
+        <div v-if="char === 'A'">It's A</div>
+        <div v-else-if="char === 'B'">It's B</div>
+        <div v-else>Neither A nor B</div>
+    </div>
+    
+<script>
+    let studyList = ['Java','Spring','Boot', 'Vue'];
+    let objectList = [
+        {name: 'Java', price: 2000 },
+        {name: 'Spring', price: 3000 },
+        {name: 'Boot', price: 4000 },
+        {name: 'Vue', price: 5000 },
+        ];
+    new Vue({
+        el: '#app1',
+        data: function(){
+            return {
+                flagIf: false,
+                flagShow: false,
+                arrayItems: studyList,
+                objectArrayItems: objectList,
+            }
+        },
+        computed: {
+            filteredItems: function(){
+                return this.objectArrayItems.filter( el => el.price > 3000 ); // this 필요!!!
+            }
+        }
+    });
+
+    let ch = 'C';
+    new Vue({
+        data: {
+            char: ch
+        }
+    }).$mount('#app2');
+</script>
+</body>
+</html>
+
+<!-- v-if v-show v-for -->
+<!-- v-if v-else-if $mount() -->
