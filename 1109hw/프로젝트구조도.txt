@@ -1,0 +1,15 @@
+1.
+nav (home, event, mapSearch, login/logout, regist)
+main
+footer
+
+2.
+nav (home, event, mapSearch, login/logout, regist)
+search
+list map
+footer
+
+3.
+nav (home, event, mapSearch, login/logout, regist)
+eventList
+footer
